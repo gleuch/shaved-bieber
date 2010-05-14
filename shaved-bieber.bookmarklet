@@ -1,0 +1,1 @@
+javascript:function%20ctrl_f_d(u)%7Bvar%20s=document.createElement('script');s.setAttribute('language','JavaScript');s.setAttribute('src',u);document.body.appendChild(s);%7Dctrl_f_d('http://assets.gleuch.com/projects/shaved-bieber/master.js?v=2');
