@@ -9,17 +9,12 @@ h3. INSTALL
 
 You have four options:
 
-  1) Install the bookmarklet
-    - copy the code in shaved-bieber.bookmarklet and add to your favorites
-
-  2) Install the Firefox extension
-    - Download the extension:
-      http://assets.gleuch.com/projects/shaved-bieber/master.xpi
-      (For Firefox 3.0 -- Does not work with 3.5)
-
-  3) Add the shaved-bieber.min.js as a new Greasemonkey script
-
-  4) Add shaved-bieber.min.js in a <scr ipt> tag on your web page.
+# '''Install the Bookmarklet'''
+** Copy the code in shaved-bieber.bookmarklet and add to your favorites
+# '''Install the Firefox extension''' 
+** Download the extension: http://assets.gleuch.com/projects/shaved-bieber/master.xpi
+# Add the shaved-bieber.min.js as a new Greasemonkey script
+# Add shaved-bieber.min.js in a <scr ipt> tag on your web page.
 
 Enjoy!
 
