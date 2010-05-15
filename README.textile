@@ -5,26 +5,26 @@ Bookmarklet, Firefox extension, and inline code to clean up those lower regions 
 by Greg Leuch ("@gleuch":http://twitter.com/gleuch | "http://www.gleuch.com":http://www.gleuch.com)
 
 
-h3. INSTALL
+h2. INSTALL
 
 You have four options:
 
-# '''Install the Bookmarklet'''
+# *Install the Bookmarklet*
 ** Copy the code in shaved-bieber.bookmarklet and add to your favorites
-# '''Install the Firefox extension''' 
-** Download the extension: http://assets.gleuch.com/projects/shaved-bieber/master.xpi
+# *Install the Firefox extension*
+** Download the extension: "http://assets.gleuch.com/projects/shaved-bieber/master.xpi":http://assets.gleuch.com/projects/shaved-bieber/master.xpi
 # Add the shaved-bieber.min.js as a new Greasemonkey script
-# Add shaved-bieber.min.js in a <scr ipt> tag on your web page.
+# Add shaved-bieber.min.js in a &lt;script&gt; tag on your web page.
 
 Enjoy!
 
 
-h3. CREDITS
+h2. CREDITS
 
 Based on the "Ctrl+F'd project":http://github.com/gleuch/ctrl-f-d by "Greg Leuch":http://www.gleuch.com
 Inspiration from "Nick Bilton":http://twitter.com/nickbilton and "Chris Menning":http://twitter.com/straythenomad.
 
 
-h3. LICENSE
+h2. LICENSE
 
 Creative Commons BY-NC-SA "http://creativecommons.org/licenses/by-nc-sa/3.0/us":http://creativecommons.org/licenses/by-nc-sa/3.0/us
