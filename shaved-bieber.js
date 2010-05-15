@@ -43,7 +43,7 @@ function shaved_bieber_start($_) {
     };
 
     $_.extend($_.shaved_bieber, {
-      settings : {hide_bg : true, search: /(justin)(\s)?(drew\s)?(bieber|beiber)/img, replace: '<span class="shaved_bieber">SHAVED BIEBER</span>', starred: '****** ******', init : false, finish : false},
+      settings : {hide_bg : true, search: /(justin(\s|\-|\_))?(drew(\s|\-\_))?(bieber|beiber)/img, replace: '<span class="shaved_bieber" style="color: %C; background-color: %C;">$1$2$3$4$5</span>', starred: '****** ******', init : false, finish : false},
 
       filter : function(self) {
         if (self.nodeType == 1) {
@@ -60,7 +60,7 @@ function shaved_bieber_start($_) {
         if (self.nodeType == 3) {
           if (self.nodeValue.replace(/\s/ig, '') != '') {
             if (!c) c = $_(self).parent() ? $_(self).parent().css('color') : '#000000';
-            text = self.nodeValue.replace($_.shaved_bieber.settings.search, '<span class="shaved_bieber" style="color: '+ c +'; background-color:'+c+';">$1$2$3</span>')
+            text = self.nodeValue.replace($_.shaved_bieber.settings.search, $_.shaved_bieber.settings.replace.replace(/\%C/mg, c) );
             $_(self).after(text);
             self.nodeValue = '';
           }
@@ -69,7 +69,7 @@ function shaved_bieber_start($_) {
           if ($_(self).children().length > 0) {
             $_.shaved_bieber($_(self).contents(), c);
           } else if ($_(self).children().length == 0) {
-            text = $_(self).html().replace($_.shaved_bieber.settings.search, '<span class="shaved_bieber" style="color: '+ c +'; background-color:'+c+';">$1$2$3$4</span>');
+            text = $_(self).html().replace($_.shaved_bieber.settings.search, $_.shaved_bieber.settings.replace.replace(/\%C/mg, c) );
             $_(self).html(text);
           }
         }
@@ -84,47 +84,24 @@ function shaved_bieber_start($_) {
           this.title = this.title.replace($_.shaved_bieber.settings.search, $_.shaved_bieber.settings.starred)
         });
 
-        // setTimeout(function() {
-        //   $_('object,embed,iframe').each(function() {
-        //     var r = $_(this);
-        //     r.wrap(document.createElement('div'));
-        //     var s = $_(this).parent();
-        //     s.css({width: r.width(), height: r.height()}).addClass('shaved_bieber');
-        //     r.remove();
-        //   });
-        // }, 1000);
-
-        // $_('img, input[type=image]').each(function() {
-        //   var r = $_(this), w = r.width(), h = r.height();
-        //   r.css({width: r.width(), height: r.height()}).attr('src', 'http://assets.gleuch.com/blank.png').width(w).height(h);
-        // });
+        $_('img, input[type=image]').each(function() {
+          if ($_(this).attr('alt').match($_.shaved_bieber.settings.search) || $_(this).attr('title').match($_.shaved_bieber.settings.search) || $_(this).attr('src').match($_.shaved_bieber.settings.search)) {
+            var r = $_(this), w = r.width(), h = r.height(), c = rgb2hex($_(this).css('color'));
+            r.css({background: c, width: r.width(), height: r.height()}).attr('src', 'http://assets.gleuch.com/blank.png').width(w).height(h);
+          }
+        });
 
         var s = document.createElement("style");
-        s.innerHTML = ".shaved_bieber {font-size: inherit !important; "+ ($_.shaved_bieber.settings.hide_bg ? "background-image: none !important;" : "") +"} .bg_shaved_bieber {"+ ($_.shaved_bieber.settings.hide_bg ? "background-image: none !important;" : "") +"} select, input, textarea, object, embed, img, button, hr {background: #000 !important; color: #000 !important; border-color: #000 !important;}";
+        s.innerHTML = ".shaved_bieber {font-size: inherit !important; "+ ($_.shaved_bieber.settings.hide_bg ? "background-image: none !important;" : "") +"} .bg_shaved_bieber {"+ ($_.shaved_bieber.settings.hide_bg ? "background-image: none !important;" : "") +"}";
         $_('head').append(s);
-
-        /*if ($_.shaved_bieber.settings.hide_bg) $_('body *, body, html').each(function() {$_(this).addClass('bg_shaved_bieber');});*/
 
         $_.shaved_bieber.settings.finish = true;
       }
     });
   })($_);
   
-  /* $(window).ready(function() { */
-    /* Remove some shitty ads */
-    $('iframe, a[href~=atdmt], script[src~=doubleclick]').remove();
-  /* }); */
-  /* $_(document).ready(function() { */
-    $_.shaved_bieber('html', '#000000');
-
-    /* setTimeout(function() {
-      if ($_.shaved_bieber.settings.md5 != $('*').size()) {
-        $_.shaved_bieber('html', '#000000');
-        $_.shaved_bieber.settings.md5 = $('*').size();
-      }
-    }, 2000); */
-  /* }); */
+  $_.shaved_bieber('html', '#000000');
 }
 
 
-shaved_bieber_wait();
+if (!$_scruff) {shaved_bieber_wait();}
