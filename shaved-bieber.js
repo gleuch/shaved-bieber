@@ -104,4 +104,4 @@ function shaved_bieber_start($_) {
 }
 
 
-if (!$_scruff) {shaved_bieber_wait();}
+if (typeof($_scruff) == 'undefined' || !$_scruff) {shaved_bieber_wait();}
