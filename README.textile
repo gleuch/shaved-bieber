@@ -21,10 +21,9 @@ Enjoy!
 
 h2. CREDITS
 
-Based on the "Ctrl+F'd project":http://github.com/gleuch/ctrl-f-d by "Greg Leuch":http://www.gleuch.com
+Based on the "Ctrl+F'd project":http://github.com/gleuch/ctrl-f-d by "Greg Leuch":http://www.gleuch.com.
 Inspiration from "Nick Bilton":http://twitter.com/nickbilton and "Chris Menning":http://twitter.com/straythenomad.
-
 
 h2. LICENSE
 
-Creative Commons BY-NC-SA "http://creativecommons.org/licenses/by-nc-sa/3.0/us":http://creativecommons.org/licenses/by-nc-sa/3.0/us
+MIT License "http://creativecommons.org/licenses/MIT":http://creativecommons.org/licenses/MIT

@@ -4,7 +4,9 @@
   of websites from Bieber mentions.
 
   by Greg Leuch <http://www.gleuch.com>
- 
+
+  MIT License - http://creativecommons.org/licenses/MIT
+
   ------------------------------------------------------------------------------------
  
 */
