@@ -10,7 +10,8 @@ h2. INSTALL
 You have four options:
 
 # *Install the Bookmarklet*
-** Copy the code in shaved-bieber.bookmarklet and add to your favorites
+** Copy the code in shaved-bieber.bookmarklet and add to your favorites.
+** Or, visit "fffff.at/shaved-bieber":http://fffff.at/shaved-bieber for easy one-step link adding.
 # *Install the Firefox extension*
 ** Download the extension: "http://assets.gleuch.com/projects/shaved-bieber/master.xpi":http://assets.gleuch.com/projects/shaved-bieber/master.xpi
 # Add the shaved-bieber.min.js as a new Greasemonkey script
@@ -23,6 +24,7 @@ h2. CREDITS
 
 Based on the "Ctrl+F'd project":http://github.com/gleuch/ctrl-f-d by "Greg Leuch":http://www.gleuch.com.
 Inspiration from "Nick Bilton":http://twitter.com/nickbilton and "Chris Menning":http://twitter.com/straythenomad.
+Special thanks to "Jamie Wilkinson":http://jamiedubs.com for advice and testing.
 
 h2. LICENSE
 
