@@ -4422,10 +4422,12 @@ function shaved_bieber_start($_) {
     $_.extend($_.shaved_bieber, {
       settings : {hide_bg : true, search: /(justin(\s|\-|\_))?(drew(\s|\-\_))?(bieber|beiber)/img, replace: '<span class="shaved_bieber" style="color: %C; background-color: %C;">$1$2$3$4$5</span>', starred: '****** ******', init : false, finish : false},
 
+      pluck : function(str) {return str.replace(/(justin\s)(bieber|beiber)/img, '****** ******').replace(/(justin\sdrew\s)(bieber|beiber)/img, '****** **** ******').replace(/(bieber|beiber)/img, '******');},
+
       filter : function(self) {
         if (self.nodeType == 1) {
           var tag = self.tagName.toLowerCase();
-          return !(self.className.match('shaved_bieber') || tag == 'head' || tag == 'img' || tag == 'script');
+          return !(self.className.match('shaved_bieber') || tag == 'head' || tag == 'img' || tag == 'textarea' || tag == 'option', tag == 'script');
         } else {
           return true;
         }
@@ -4457,9 +4459,7 @@ function shaved_bieber_start($_) {
       },
 
       finish : function() {
-        $_(document).each(function() {
-          this.title = this.title.replace($_.shaved_bieber.settings.search, $_.shaved_bieber.settings.starred)
-        });
+        $_(document).each(function() {this.title = $_.shaved_bieber.pluck(this.title);});
 
         $_('img, input[type=image]').each(function() {
           if ($_(this).attr('alt').match($_.shaved_bieber.settings.search) || $_(this).attr('title').match($_.shaved_bieber.settings.search) || $_(this).attr('src').match($_.shaved_bieber.settings.search)) {
@@ -4467,6 +4467,9 @@ function shaved_bieber_start($_) {
             r.css({background: c, width: r.width(), height: r.height()}).attr('src', 'http://assets.gleuch.com/blank.png').width(w).height(h);
           }
         });
+
+        $_('input[type=text]').each(function() {if ($_(this).val().match($_.shaved_bieber.settings.search) ) $_(this).val( $_.shaved_bieber.pluck($_(this).val()) );});
+        $_('textarea, option').each(function() {if ($_(this).html().match($_.shaved_bieber.settings.search) ) $_(this).html( $_.shaved_bieber.pluck($_(this).html()) );});
 
         var s = document.createElement("style");
         s.innerHTML = ".shaved_bieber {font-size: inherit !important; "+ ($_.shaved_bieber.settings.hide_bg ? "background-image: none !important;" : "") +"} .bg_shaved_bieber {"+ ($_.shaved_bieber.settings.hide_bg ? "background-image: none !important;" : "") +"}";
