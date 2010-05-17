@@ -1,6 +1,6 @@
 h1. SHAVED BIEBER
 
-Bookmarklet, Firefox extension, and inline code to clean up those lower regions of websites from Bieber mentions.
+Bookmarklet, Firefox Add-on, and inline code to clean up those lower regions of websites from Bieber mentions.
 
 by Greg Leuch ("@gleuch":http://twitter.com/gleuch | "http://www.gleuch.com":http://www.gleuch.com)
 
@@ -12,8 +12,8 @@ You have four options:
 # *Install the Bookmarklet*
 ** Copy the code in shaved-bieber.bookmarklet and add to your favorites.
 ** Or, visit "fffff.at/shaved-bieber":http://fffff.at/shaved-bieber for easy one-step link adding.
-# *Install the Firefox extension*
-** Download the extension: "http://assets.gleuch.com/projects/shaved-bieber/master.xpi":http://assets.gleuch.com/projects/shaved-bieber/master.xpi
+# *Install the Firefox Add-on*
+** Download the Add-on: "http://assets.gleuch.com/projects/shaved-bieber/master.xpi":http://assets.gleuch.com/projects/shaved-bieber/master.xpi
 # Add the shaved-bieber.min.js as a new Greasemonkey script
 # Add shaved-bieber.min.js in a &lt;script&gt; tag on your web page.
 
