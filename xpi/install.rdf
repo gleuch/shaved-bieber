@@ -4,10 +4,10 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>shaved-bieber@gleuch.com</em:id>
     <em:name>Shaved Bieber</em:name>
-    <em:version>1.0b</em:version>
+    <em:version>1.0.1</em:version>
     <em:creator>Greg Leuch</em:creator>
     <em:description>Bookmarklet, Firefox extension, and inline code to clean up those lower regions of websites from Bieber mentions.</em:description>
-    <em:homepageURL>http://www.gleuch.com</em:homepageURL>
+    <em:homepageURL>http://www.shavedbieber.com</em:homepageURL>
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->

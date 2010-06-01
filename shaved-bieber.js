@@ -45,14 +45,14 @@ function shaved_bieber_start($_) {
     };
 
     $_.extend($_.shaved_bieber, {
-      settings : {hide_bg : true, search: /(justin(\s|\-|\_))?(drew(\s|\-\_))?(bieber|beiber)/img, replace: '<span class="shaved_bieber" style="color: %C; background-color: %C;">$1$2$3$4$5</span>', starred: '****** ******', init : false, finish : false},
+      settings : {hide_bg : true, search: /(justin(\s|\-|\_)?)?(drew(\s|\-\_))?(bieber|beiber)/img, replace: '<span class="shaved_bieber" style="color: %C; background-color: %C;">$1$2$3$4$5</span>', starred: '****** ******', init : false, finish : false},
 
       pluck : function(str) {return str.replace(/(justin\s)(bieber|beiber)/img, '****** ******').replace(/(justin\sdrew\s)(bieber|beiber)/img, '****** **** ******').replace(/(bieber|beiber)/img, '******');},
 
       filter : function(self) {
         if (self.nodeType == 1) {
           var tag = self.tagName.toLowerCase();
-          return !(self.className.match('shaved_bieber') || tag == 'head' || tag == 'img' || tag == 'textarea' || tag == 'option', tag == 'script');
+          return !(self.className.match('shaved_bieber') || tag == 'head' || tag == 'img' || tag == 'textarea' || tag == 'option' || tag == 'style' || tag == 'script');
         } else {
           return true;
         }

@@ -4427,7 +4427,7 @@ function shaved_bieber_start($_) {
       filter : function(self) {
         if (self.nodeType == 1) {
           var tag = self.tagName.toLowerCase();
-          return !(self.className.match('shaved_bieber') || tag == 'head' || tag == 'img' || tag == 'textarea' || tag == 'option', tag == 'script');
+          return !(self.className.match('shaved_bieber') || tag == 'head' || tag == 'img' || tag == 'textarea' || tag == 'option' || tag == 'style' || tag == 'script');
         } else {
           return true;
         }

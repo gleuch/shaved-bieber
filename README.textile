@@ -29,3 +29,12 @@ Special thanks to "Jamie Wilkinson":http://jamiedubs.com for advice and testing.
 h2. LICENSE
 
 MIT License "http://creativecommons.org/licenses/MIT":http://creativecommons.org/licenses/MIT
+
+
+h2. CHANGELOG
+
+h6. 1.0.1b (30 May 2010)
+Fixing bug where code being injected into inline stylesheets.
+
+h6. 1.0b (17 May 2010)
+Created, tested, released on "FAT Lab":http://fffff.at/shaved-bieber
