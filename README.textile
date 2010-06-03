@@ -25,7 +25,7 @@ A Google Chrome version is available on "chrome.google.com":https://chrome.googl
 
 h2. UPDATING
 
-h5. Firefox Add-on
+h4. Firefox Add-on
 
 Want make changes and install your updated version of the Firefox add-on? Follow the steps below:
 
@@ -36,7 +36,7 @@ Want make changes and install your updated version of the Firefox add-on? Follow
   * ????
   * PROFIT!
 
-h5. Bookmarklet
+h4. Bookmarklet
 
 Making changes to the bookmarklet version?  Change the URL path in the shaved-bieber.bookmarklet file to your server, copy the code and add as bookmarklet, and upload your changes to shaved-bieber.js to your server.
 
@@ -56,11 +56,11 @@ MIT License "http://creativecommons.org/licenses/MIT":http://creativecommons.org
 
 h2. CHANGELOG
 
-h6. 1.0.1b (30 May 2010)
+h4. 1.0.1b (30 May 2010)
 
 Fixing bug where code being injected into inline stylesheets.
 
-h6. 1.0b (17 May 2010)
+h4. 1.0b (17 May 2010)
 
 Created, tested, released on "FAT Lab":http://fffff.at/shaved-bieber
 
