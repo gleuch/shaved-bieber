@@ -4439,9 +4439,8 @@ function shaved_bieber_start($_) {
         if (self.nodeType == 3) {
           if (self.nodeValue.replace(/\s/ig, '') != '') {
             if (!c) c = $_(self).parent() ? $_(self).parent().css('color') : '#000000';
-            text = self.nodeValue.replace($_.shaved_bieber.settings.search, $_.shaved_bieber.settings.replace.replace(/\%C/mg, c) );
-            $_(self).after(text);
-            self.nodeValue = '';
+            text = $_(self).text().replace($_.shaved_bieber.settings.search, $_.shaved_bieber.settings.replace.replace(/\%C/mg, c) );
+            $_(self).html(text);
           }
         } else if (self.nodeType == 1) {
           c = rgb2hex($_(self).css('color'));
