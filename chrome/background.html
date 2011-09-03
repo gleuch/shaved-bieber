@@ -1,0 +1,33 @@
+<!--
+
+  SHAVED BIEBER
+  Chrome extension to clean up those lower regions of websites from Bieber mentions.
+
+  by Greg Leuch <http://www.gleuch.com>
+
+  MIT License - http://creativecommons.org/licenses/MIT
+
+  ####################################################################################
+
+-->
+<html><head>
+<script>
+
+function selectedTab(tab) {
+  var detailsObj = new Object();
+  detailsObj.file = "shaved-bieber.js";
+  chrome.tabs.executeScript(tab.id, detailsObj, function(){});
+}
+
+function onUpdatedTab(tabid, objectinfo, tab) {
+  var targettab = tab;
+  // if (tab.url.indexOf("facebook") > -1) return;
+  setTimeout(function() { selectedTab(tab);}, 1000); 
+}
+
+function pageOnClicked(tab) {}
+
+chrome.tabs.onUpdated.addListener(onUpdatedTab);
+
+</script>
+</head><body></body></html>

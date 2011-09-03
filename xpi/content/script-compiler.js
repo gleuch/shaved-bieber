@@ -1,4 +1,4 @@
-var compileduserscript_gmCompiler={
+var shaved_bieber_gmCompiler={
 
 // getUrlContents adapted from Greasemonkey Compiler
 // http://www.letitblog.com/code/python/greasemonkey.py.txt
@@ -51,14 +51,14 @@ contentLoad: function(e) {
 	var href=new XPCNativeWrapper(unsafeLoc, "href").href;
 
 	if (
-		compileduserscript_gmCompiler.isGreasemonkeyable(href)
+		shaved_bieber_gmCompiler.isGreasemonkeyable(href)
 		&& true
 		&& true
 	) {
-		var script=compileduserscript_gmCompiler.getUrlContents(
-			'chrome://compileduserscript/content/shaved-bieber.js'
+		var script=shaved_bieber_gmCompiler.getUrlContents(
+			'chrome://shaved-bieber/content/shaved-bieber.js'
 		);
-		compileduserscript_gmCompiler.injectScript(script, href, unsafeWin);
+		shaved_bieber_gmCompiler.injectScript(script, href, unsafeWin);
 	}
 },
 
@@ -68,8 +68,8 @@ injectScript: function(script, url, unsafeContentWin) {
 
 	sandbox=new Components.utils.Sandbox(safeWin);
 
-	var storage=new compileduserscript_ScriptStorage();
-	xmlhttpRequester=new compileduserscript_xmlhttpRequester(
+	var storage=new shaved_bieber_ScriptStorage();
+	xmlhttpRequester=new shaved_bieber_xmlhttpRequester(
 		unsafeContentWin, window//appSvc.hiddenDOMWindow
 	);
 
@@ -81,11 +81,11 @@ injectScript: function(script, url, unsafeContentWin) {
 	sandbox.XPathResult=Components.interfaces.nsIDOMXPathResult;
 
 	// add our own APIs
-	sandbox.GM_addStyle=function(css) { compileduserscript_gmCompiler.addStyle(sandbox.document, css) };
-	sandbox.GM_setValue=compileduserscript_gmCompiler.hitch(storage, "setValue");
-	sandbox.GM_getValue=compileduserscript_gmCompiler.hitch(storage, "getValue");
-	sandbox.GM_openInTab=compileduserscript_gmCompiler.hitch(this, "openInTab", unsafeContentWin);
-	sandbox.GM_xmlhttpRequest=compileduserscript_gmCompiler.hitch(
+	sandbox.GM_addStyle=function(css) { shaved_bieber_gmCompiler.addStyle(sandbox.document, css) };
+	sandbox.GM_setValue=shaved_bieber_gmCompiler.hitch(storage, "setValue");
+	sandbox.GM_getValue=shaved_bieber_gmCompiler.hitch(storage, "getValue");
+	sandbox.GM_openInTab=shaved_bieber_gmCompiler.hitch(this, "openInTab", unsafeContentWin);
+	sandbox.GM_xmlhttpRequest=shaved_bieber_gmCompiler.hitch(
 		xmlhttpRequester, "contentStartRequest"
 	);
 	//unsupported
@@ -105,8 +105,7 @@ injectScript: function(script, url, unsafeContentWin) {
 		var e2=new Error(typeof e=="string" ? e : e.message);
 		e2.fileName=script.filename;
 		e2.lineNumber=0;
-		//GM_logError(e2);
-		alert(e2);
+    // GM_logError(e2);
 	}
 },
 
@@ -182,7 +181,7 @@ hitch: function(obj, meth) {
 	var staticArgs = Array.prototype.splice.call(arguments, 2, arguments.length);
 
 	return function() {
-		if (compileduserscript_gmCompiler.apiLeakCheck(hitchCaller)) {
+		if (shaved_bieber_gmCompiler.apiLeakCheck(hitchCaller)) {
 			return;
 		}
 		
@@ -213,33 +212,33 @@ addStyle:function(doc, css) {
 
 onLoad: function() {
 	var	appcontent=window.document.getElementById("appcontent");
-	if (appcontent && !appcontent.greased_compileduserscript_gmCompiler) {
-		appcontent.greased_compileduserscript_gmCompiler=true;
-		appcontent.addEventListener("DOMContentLoaded", compileduserscript_gmCompiler.contentLoad, false);
+	if (appcontent && !appcontent.greased_shaved_bieber_gmCompiler) {
+		appcontent.greased_shaved_bieber_gmCompiler=true;
+		appcontent.addEventListener("DOMContentLoaded", shaved_bieber_gmCompiler.contentLoad, false);
 	}
 },
 
 onUnLoad: function() {
 	//remove now unnecessary listeners
-	window.removeEventListener('load', compileduserscript_gmCompiler.onLoad, false);
-	window.removeEventListener('unload', compileduserscript_gmCompiler.onUnLoad, false);
+	window.removeEventListener('load', shaved_bieber_gmCompiler.onLoad, false);
+	window.removeEventListener('unload', shaved_bieber_gmCompiler.onUnLoad, false);
 	window.document.getElementById("appcontent")
-		.removeEventListener("DOMContentLoaded", compileduserscript_gmCompiler.contentLoad, false);
+		.removeEventListener("DOMContentLoaded", shaved_bieber_gmCompiler.contentLoad, false);
 },
 
-}; //object compileduserscript_gmCompiler
+}; //object shaved_bieber_gmCompiler
 
 
-function compileduserscript_ScriptStorage() {
-	this.prefMan=new compileduserscript_PrefManager();
+function shaved_bieber_ScriptStorage() {
+	this.prefMan=new shaved_bieber_PrefManager();
 }
-compileduserscript_ScriptStorage.prototype.setValue = function(name, val) {
+shaved_bieber_ScriptStorage.prototype.setValue = function(name, val) {
 	this.prefMan.setValue(name, val);
 }
-compileduserscript_ScriptStorage.prototype.getValue = function(name, defVal) {
+shaved_bieber_ScriptStorage.prototype.getValue = function(name, defVal) {
 	return this.prefMan.getValue(name, defVal);
 }
 
 
-window.addEventListener('load', compileduserscript_gmCompiler.onLoad, false);
-window.addEventListener('unload', compileduserscript_gmCompiler.onUnLoad, false);
+window.addEventListener('load', shaved_bieber_gmCompiler.onLoad, false);
+window.addEventListener('unload', shaved_bieber_gmCompiler.onUnLoad, false);

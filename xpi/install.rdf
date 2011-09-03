@@ -3,16 +3,23 @@
  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:id>shaved-bieber@gleuch.com</em:id>
+
     <em:name>Shaved Bieber</em:name>
-    <em:version>1.0.2</em:version>
+    <em:version>1.0.3</em:version>
+
     <em:creator>Greg Leuch</em:creator>
-    <em:description>Bookmarklet, Firefox extension, and inline code to clean up those lower regions of websites from Bieber mentions.</em:description>
+    <em:description>Clean up those lower regions of websites from Bieber mentions.</em:description>
     <em:homepageURL>http://www.shavedbieber.com</em:homepageURL>
+
+    <em:updateURL>http://addons.gleuch.com/shaved-bieber/updates/firefox</em:updateURL>
+    <em:updateInfoURL>http://addons.gleuch.com/shaved-bieber/updates/firefox/info</em:updateInfoURL>
+    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqY9Pm2uEudazD50xs7dRLt+jK10lUlZVVPtuxk8ub8/Sv0CC6RX95fU4mBXSsXhPbQuls1QC//7NgbqpC54cEp+7a61b2tlkgrvHFl75RNBIRngE2Pvg56CKbf6mpQHp3hZJaLdkJfiWXZx81pv6AZcwqs9/eVAuItTxoqPjqDQIDAQAB</em:updateKey>
+
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
-        <em:minVersion>3.5.0</em:minVersion>
-        <em:maxVersion>4.0.*</em:maxVersion>
+        <em:minVersion>3.6.0</em:minVersion>
+        <em:maxVersion>7.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>

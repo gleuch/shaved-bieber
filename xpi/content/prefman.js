@@ -1,5 +1,5 @@
-function compileduserscript_PrefManager() {
-	var startPoint="compileduserscript.";
+function shaved_bieber_PrefManager() {
+	var startPoint="shaved_bieber.";
 
 	var pref=Components.classes["@mozilla.org/preferences-service;1"].
 		getService(Components.interfaces.nsIPrefService).
