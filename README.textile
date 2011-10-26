@@ -1,45 +1,15 @@
 h1. SHAVED BIEBER
 
-Bookmarklet, Firefox Add-on, and inline code to clean up those lower regions of websites from Bieber mentions.
+Browser addons to clean up those lower regions of websites from Bieber mentions.
 
 by Greg Leuch ("@gleuch":http://twitter.com/gleuch | "http://www.gleuch.com":http://www.gleuch.com)
 
 
 h2. INSTALL
 
-You have four options:
-
-# *Install the Bookmarklet*
-** Copy the code in shaved-bieber.bookmarklet and add to your favorites.
-** Or, visit "fffff.at/shaved-bieber":http://fffff.at/shaved-bieber for easy one-step link adding.
-# *Install the Firefox Add-on*
-** Download the Add-on: "http://assets.gleuch.com/projects/shaved-bieber/master.xpi":http://assets.gleuch.com/projects/shaved-bieber/master.xpi
-# Add the shaved-bieber.min.js as a new Greasemonkey script
-# Add shaved-bieber.min.js in a &lt;script&gt; tag on your web page.
-
-Enjoy!
-
-A Google Chrome version is available on "chrome.google.com":https://chrome.google.com/extensions/detail/hohkcfiapflpfbfpjeahdfbmhpmbhcod. (Credit to "Zen Lin":http://twitter.com/infragoblin for the export!)
-
-
-
-h2. UPDATING
-
-h4. Firefox Add-on
-
-Want make changes and install your updated version of the Firefox add-on? Follow the steps below:
-
-  * Update xpi/content/shaved-bieber.js to your liking.
-  * Make a .zip file of the contents of the xpi file, with the files as the root of the compressed file. (Read: Don't just compress xpi, do xpi/*.)
-  * Rename compressed file extension from .zip to .xpi.
-  * Go into Firefox, selected "Open File", and select your new .xpi file.
-  * ????
-  * PROFIT!
-
-h4. Bookmarklet
-
-Making changes to the bookmarklet version?  Change the URL path in the shaved-bieber.bookmarklet file to your server, copy the code and add as bookmarklet, and upload your changes to shaved-bieber.js to your server.
-
+h4. Browser Add-ons
+* "Google Chrome":http://addons.gleuch.com/shaved-bieber/downloads/chrome
+* Mozilla Firefox":http://addons.gleuch.com/shaved-bieber/downloads/firefox
 
 
 h2. CREDITS
@@ -51,7 +21,7 @@ Special thanks to "Jamie Wilkinson":http://jamiedubs.com for advice and testing.
 
 h2. LICENSE
 
-MIT License "http://creativecommons.org/licenses/MIT":http://creativecommons.org/licenses/MIT
+MIT License "http://creativecommons.org/licenses/MIT":http://creativecommons.org/licenses/MIT. Not for commercial use.
 
 
 h2. CHANGELOG
@@ -62,6 +32,9 @@ Fixing bug where code being injected into inline stylesheets.
 
 h4. 1.0b (17 May 2010)
 
-Created, tested, released on "FAT Lab":http://fffff.at/shaved-bieber
+Created, tested, released by "Greg Leuch":http://gleuch.com on "FAT Lab":http://fffff.at/shaved-bieber
 
 
+h2. TODO
+
+* Also block Selena Gomez when JB is mentioned.

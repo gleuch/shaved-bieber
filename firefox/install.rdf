@@ -10,6 +10,7 @@
     <em:creator>Greg Leuch</em:creator>
     <em:description>Clean up those lower regions of websites from Bieber mentions.</em:description>
     <em:homepageURL>http://www.shavedbieber.com</em:homepageURL>
+    <em:iconURL>chrome://shaved-bieber/content/icons/shaved-bieber64.png</em:iconURL>
 
     <em:updateURL>http://addons.gleuch.com/shaved-bieber/updates/firefox</em:updateURL>
     <em:updateInfoURL>http://addons.gleuch.com/shaved-bieber/updates/firefox/info</em:updateInfoURL>
