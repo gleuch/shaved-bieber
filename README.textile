@@ -26,15 +26,23 @@ MIT License "http://creativecommons.org/licenses/MIT":http://creativecommons.org
 
 h2. CHANGELOG
 
-h4. 1.0.1b (30 May 2010)
+h4. FF 1.0.3, Chrome 1.0.0 (03 Sept 2011)
+
+Adding Chrome extension 1.0.0. Enable update URLs through addons.gleuch.com.
+
+h4. FF 1.0.2 (02 Apr 2011)
+
+Updating FF version, fixing possible XSS vuln.
+
+h4. FF 1.0.1b (30 May 2010)
 
 Fixing bug where code being injected into inline stylesheets.
 
-h4. 1.0b (17 May 2010)
+h4. FF 1.0b (17 May 2010)
 
 Created, tested, released by "Greg Leuch":http://gleuch.com on "FAT Lab":http://fffff.at/shaved-bieber
 
 
 h2. TODO
 
-* Also block Selena Gomez when JB is mentioned.
+* Also block Selena Gomez when JB is mentioned. (25 Oct 2011)
