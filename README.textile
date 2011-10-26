@@ -8,8 +8,8 @@ by Greg Leuch ("@gleuch":http://twitter.com/gleuch | "http://www.gleuch.com":htt
 h2. INSTALL
 
 h4. Browser Add-ons
-* "Google Chrome":http://addons.gleuch.com/shaved-bieber/downloads/chrome
-* Mozilla Firefox":http://addons.gleuch.com/shaved-bieber/downloads/firefox
+* Download for *"Google Chrome":http://addons.gleuch.com/shaved-bieber/downloads/chrome*
+* Download for *"Mozilla Firefox":http://addons.gleuch.com/shaved-bieber/downloads/firefox*
 
 
 h2. CREDITS
